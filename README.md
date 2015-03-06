@@ -1,25 +1,13 @@
 # Ember-deploy-yuidoc
 
-This README outlines the details of collaborating on this Ember addon.
+WIP - Intended to be built for [ember-cli-deploy v0.5.0](https://github.com/ember-cli/ember-cli-deploy/milestones/0.5.0)
 
 ## Installation
 
-* `git clone` this repository
+not published to npm at the moment so you'll have to create a symlink.
+
+* `git clone https://github.com/joebartels/ember-deploy-yuidoc && cd ember-deploy-yuidoc`
 * `npm install`
-* `bower install`
-
-## Running
-
-* `ember server`
-* Visit your app at http://localhost:4200.
-
-## Running Tests
-
-* `ember test`
-* `ember test --server`
-
-## Building
-
-* `ember build`
-
-For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
+* `npm link`
+* `cd your/project/directory`
+* `npm link ember-deploy-yuidoc`
