@@ -1,15 +1,19 @@
-/* jshint node: true */
 'use strict';
 
-module.exports = {
-  name: 'ember-deploy-yuidoc',
+var require DeployYuiDoc = require('./lib/doc-adapter')
 
-  build: function() {
-    return yuiDocTask.build();
-  },
+function DeployYuiDoc() {
+  this.name = 'ember-deploy-yuidoc';
+  this.type = 'ember-deploy-addon';
 
-  update: function() {
-    // upload docs
+  this.adapters = {
+    build: {
+      'yui-doc': YuiDocBuilder
+    },
+    assets: {
+      'yui-doc': YuiDocAdapter
+    }
   }
+}
 
-};
+module.exports = DeployYuiDoc;

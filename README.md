@@ -11,3 +11,20 @@ not published to npm at the moment so you'll have to create a symlink.
 * `npm link`
 * `cd your/project/directory`
 * `npm link ember-deploy-yuidoc`
+
+#### config/deploy.js
+
+```javascript
+module.exports = {
+  documentation: {
+    buildEnv: 'documentation',
+    assets: {
+      accessKeyId: '<your-access-key-goes-here>',
+      secretAccessKey: process.env['AWS_ACCESS_KEY'],
+      bucket: '<doc-bucket-name>'
+    }
+  }
+
+}
+
+```
